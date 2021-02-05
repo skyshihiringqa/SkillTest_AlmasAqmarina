@@ -14,7 +14,6 @@ public class RegisterTest {
     Login login = new Login(driver);
     Register register = new Register(driver);
 
-    private String textAkunSaya = "Akun Saya";
     private String emailRegistered = "Email already registered";
     private String passwordNotSame = "Password doesn't match";
 

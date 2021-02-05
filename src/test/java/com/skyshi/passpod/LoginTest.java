@@ -12,7 +12,8 @@ public class LoginTest {
     WebDriver driver = Utils.getDriver();
     Login login = new Login(driver);
 
-    private String textAkunSaya = "Akun Saya";
+    private String emailNotRegistered = "User not registered";
+    private String invalidPassword = "Incorrect Email or Password";
 
     public LoginTest() throws IOException {
     }
@@ -25,11 +26,38 @@ public class LoginTest {
         login.inputEmail("almasaqmarina@gmail.com");
         login.inputPassword("Aqmarina18@");
         login.clickBtnSubmitMasuk();
-        login.userBerhasilLogin();
-        String profileText =driver.findElement(By.xpath("//*[@id=\"dropdownProfile\"]")).getText();
-        if (textAkunSaya.equals(profileText))
-            System.out.println("Same as expected -> "+profileText);
-        else System.out.println("Not same as expected ->"+profileText);
+        Utils.closeWebsite();
+    }
+
+    //login with email not registered
+    @Test
+    public void LoginWithEmailNotRegistered() throws InterruptedException {
+        Utils.openWebsite("https://passpod.com/id/login");
+        Utils.maximizeWindow();
+        login.inputEmail("almasaqmarina1@gmail.com");
+        login.inputPassword("Aqmarina18@");
+        login.clickBtnSubmitMasuk();
+        login.userSeeErrorAlert();
+        String alertError =driver.findElement(By.xpath("//*[@id=\"jsWrap\"]/div[3]/section/div/div[1]/h6")).getText();
+        if (emailNotRegistered.contains(alertError))
+            System.out.println("Same as expected -> "+alertError);
+        else System.out.println("Not same as expected ->"+alertError);
+        Utils.closeWebsite();
+    }
+
+    //login with invalid password
+    @Test
+    public void LoginWithInvalidPassword() throws InterruptedException {
+        Utils.openWebsite("https://passpod.com/id/login");
+        Utils.maximizeWindow();
+        login.inputEmail("almasaqmarina@gmail.com");
+        login.inputPassword("Aqmarina1");
+        login.clickBtnSubmitMasuk();
+        login.userSeeErrorAlert();
+        String alertError =driver.findElement(By.xpath("//*[@id=\"jsWrap\"]/div[3]/section/div/div[1]/h6")).getText();
+        if (invalidPassword.contains(alertError))
+            System.out.println("Same as expected -> "+alertError);
+        else System.out.println("Not same as expected ->"+alertError);
         Utils.closeWebsite();
     }
 }

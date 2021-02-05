@@ -8,7 +8,7 @@ public class Login extends BasePage{
     private By fieldEmail = new By.ByXPath("//*[@id=\"jsWrap\"]/div[3]/section/div/div[5]/div/form/div[1]/div/input");
     private By fieldPassword = new By.ByXPath("//*[@id=\"jsWrap\"]/div[3]/section/div/div[5]/div/form/div[2]/input");
     private By btnSubmitMasuk = new By.ByXPath("//*[@id=\"jsWrap\"]/div[3]/section/div/div[5]/div/form/button");
-    private By akunSayaText = new By.ByXPath("//*[@id=\"dropdownProfile\"]");
+    private By errorAlert = new By.ByXPath("//*[@id=\"jsWrap\"]/div[3]/section/div/div[1]");
 
     public Login (WebDriver driver) { super(driver); }
 
@@ -24,7 +24,7 @@ public class Login extends BasePage{
     public void clickBtnSubmitMasuk() throws InterruptedException {
         clickButton(btnSubmitMasuk);
     }
-    public void userBerhasilLogin() throws InterruptedException {
-        waitUntilElementIsVisible(akunSayaText);
+    public void userSeeErrorAlert() throws InterruptedException {
+        waitUntilElementIsVisible(errorAlert);
     }
 }
