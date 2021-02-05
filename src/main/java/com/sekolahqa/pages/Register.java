@@ -12,6 +12,8 @@ public class Register extends BasePage {
     private By fieldConfirmPassword = new By.ByXPath("//*[@id=\"jsWrap\"]/div[3]/section/div/div[2]/div/form/div[4]/input");
     private By checkboxTnc = new By.ByXPath("//*[@id=\"jsWrap\"]/div[3]/section/div/div[2]/div/form/div[5]/input");
     private By btnSubmitRegister = new By.ByXPath("//*[@id=\"jsWrap\"]/div[3]/section/div/div[2]/div/form/button");
+    private By alertError = new By.ByXPath("//*[@id=\"jsWrap\"]/div[3]/section/div/div[1]");
+    private By errorPassword = new By.ByXPath("//*[@id=\"jsWrap\"]/div[3]/section/div/div[2]/div/form/div[4]/span[1]");
 
     public Register (WebDriver driver) { super(driver); }
 
@@ -38,5 +40,11 @@ public class Register extends BasePage {
     }
     public void submitRegister() throws InterruptedException {
         clickButton(btnSubmitRegister);
+    }
+    public void userSeeAlertError() throws InterruptedException {
+        waitUntilElementIsVisible(alertError);
+    }
+    public void userSeeErrorPassword() throws InterruptedException {
+        waitUntilElementIsVisible(errorPassword);
     }
 }
