@@ -1,2 +1,3 @@
-# SkillTest_AlmasAqmarina
-Skill Test QA - Almas Aqmarina
+# Skill Test QA - Almas Aqmarina
+
+This README will explain about no. 4
