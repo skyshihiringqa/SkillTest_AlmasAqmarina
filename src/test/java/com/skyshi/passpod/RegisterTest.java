@@ -62,7 +62,7 @@ public class RegisterTest {
         Utils.maximizeWindow();
         register.inputFirstName("Almas");
         register.inputLastName("Aqmarina");
-        register.inputEmail("almasaqmarina+skyshi3@gmail.com");
+        register.inputEmail("almasaqmarina+skyshi5@gmail.com");
         register.inputPassword("Aqmarina18@");
         register.inputConfirmPassword("Aqmarina1");
         register.clickCheckboxTnc();
