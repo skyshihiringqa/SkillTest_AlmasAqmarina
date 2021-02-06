@@ -14,11 +14,35 @@ public class KategoryTest {
     public KategoryTest() throws IOException {
     }
 
-    // search other pocket wifi from home
+    // search other pocket wifi
     @Test
-    public void SearchOtherPasspodFromHome() throws InterruptedException {
+    public void UserSearchPasspodKategory() throws InterruptedException {
         Utils.openWebsite("https://passpod.com/id/home");
         Utils.maximizeWindow();
-        kategory.clickSewaPocketWifiBtn();
+        kategory.inputKeyword("Jepang");
+        kategory.clickBtnSearch();
+        kategory.userSeeSearchPage();
+        kategory.clickActivities();
+        kategory.clickDayTours();
+        kategory.clickPackages();
+        kategory.clickEvent();
+        kategory.clickSemuaAktivitas();
+    }
+
+    //filter urutan hasil pencarian
+    @Test
+    public void UserFilterSort() throws InterruptedException {
+        Utils.openWebsite("https://passpod.com/id/home");
+        Utils.maximizeWindow();
+        kategory.inputKeyword("Jepang");
+        kategory.clickBtnSearch();
+        kategory.userSeeSearchPage();
+        kategory.clickFilterDropdown();
+        kategory.clickTitleFilter();
+        kategory.clickFilterDropdown();
+        kategory.clickPopularityFilter();
+        kategory.clickFilterDropdown();
+        kategory.clickPriceFilter();
+        Utils.closeWebsite();
     }
 }

@@ -19,7 +19,7 @@ public class BasePage {
 
     public static void clickButton(By by) throws InterruptedException {
         WebElement element = driver.findElement(by);
-        Thread.sleep(100);
+        Thread.sleep(200);
         element.click();
     }
 
