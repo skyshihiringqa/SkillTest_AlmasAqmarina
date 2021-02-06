@@ -15,3 +15,5 @@ File utils.java berisi fungsi-fungsi yang mengatur webdriver seperti (https://gi
 
 Directory pages pada src/main berisi fungsi-fungsi yang memiliki keyword dan locator berupa XPath untuk menjalankan testcase yang kemudian akan dipanggil pada src/test
 https://github.com/skyshihiringqa/SkillTest_AlmasAqmarina/tree/master/src/main/java/com/sekolahqa/pages
+
+Untuk menjalankan Script Automation Testnya dapat mengakses directory src/test -> https://github.com/skyshihiringqa/SkillTest_AlmasAqmarina/tree/master/src/test/java/com/skyshi/passpod dan menjalankan setiap testcase menggunakan IntellIJ / Eclipse.
