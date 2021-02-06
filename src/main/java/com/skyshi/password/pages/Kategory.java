@@ -1,4 +1,4 @@
-package com.sekolahqa.pages;
+package com.skyshi.password.pages;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;

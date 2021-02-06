@@ -1,4 +1,4 @@
-package com.sekolahqa.config;
+package com.skyshi.password.config;
 
 import org.junit.Before;
 import org.openqa.selenium.WebDriver;

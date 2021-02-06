@@ -1,7 +1,7 @@
 package com.skyshi.passpod;
 
-import com.sekolahqa.config.Utils;
-import com.sekolahqa.pages.Kategory;
+import com.skyshi.password.config.Utils;
+import com.skyshi.password.pages.Kategory;
 import org.junit.jupiter.api.Test;
 import org.openqa.selenium.WebDriver;
 

@@ -1,4 +1,4 @@
-package com.sekolahqa;
+package com.skyshi.password;
 
 import org.openqa.selenium.By;
 
